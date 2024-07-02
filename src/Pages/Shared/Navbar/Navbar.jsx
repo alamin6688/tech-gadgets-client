@@ -6,30 +6,15 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          isActive ? "text-primary font-bold px-2" : "font-bold px-2"
-        }
-      >
+      <NavLink to="/" className="font-bold px-2">
         Home
       </NavLink>
 
-      <NavLink
-        to="/blogs"
-        className={({ isActive }) =>
-          isActive ? "text-primary font-bold px-2" : "font-bold px-2"
-        }
-      >
+      <NavLink to="/addProducts" className="font-bold px-2">
         Add Product
       </NavLink>
 
-      <NavLink
-        to="/bookmarks"
-        className={({ isActive }) =>
-          isActive ? "text-primary font-bold px-2" : "font-bold px-2"
-        }
-      >
+      <NavLink to="/myCart" className="font-bold px-2">
         My Cart
       </NavLink>
     </>
@@ -50,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 shadow-xl px-4 fixed z-10">
+    <div className="navbar bg-base-100 shadow-xl px-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div
