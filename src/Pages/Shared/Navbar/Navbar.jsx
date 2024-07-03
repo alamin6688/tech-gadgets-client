@@ -1,8 +1,20 @@
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../Providers/AuthProviders";
 
 const Navbar = () => {
+  const { user, logOutUser } = useContext(AuthContext);
   const [theme, setTheme] = useState("light");
+
+  const handleLogoutButton = () => {
+    logOutUser()
+      .then(() => {
+        console.log("User Log out Successfull");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
 
   const navLinks = (
     <>
@@ -16,6 +28,12 @@ const Navbar = () => {
 
       <NavLink to="/myCart" className="font-bold px-2">
         My Cart
+      </NavLink>
+      <NavLink to="/sign-in" className="font-bold px-2">
+        Sign In
+      </NavLink>
+      <NavLink to="/sign-up" className="font-bold px-2">
+        Sign Up
       </NavLink>
     </>
   );
@@ -102,7 +120,23 @@ const Navbar = () => {
             </svg>
           </label>
         </div>
-        <a className="btn btn-primary">Login</a>
+        <div>
+              {user ? (
+                <button
+                  onClick={handleLogoutButton}
+                  className="btn btn-primary border-none bg-orange-400 text-white font-bold hover:bg-orange-500"
+                >
+                  Sign Out
+                </button>
+              ) : (
+                <Link
+                  to="/sign-in"
+                  className="btn btn-primary border-none bg-orange-400 text-white font-bold hover:bg-orange-500"
+                >
+                  Sign In
+                </Link>
+              )}
+            </div>
       </div>
     </div>
   );

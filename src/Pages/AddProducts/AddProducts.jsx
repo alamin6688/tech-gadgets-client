@@ -1,14 +1,22 @@
-const AddProducts = () => {
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProviders";
+
+const AddProducts = ({ update }) => {
+
+  const { user} = useContext(AuthContext)
+
     const handleAddProduct = (e) => {
       e.preventDefault();
       const form = e.target;
+      const userName = user?.email;
       const name = form.name.value;
       const image = form.image.value;
       const brandName = form.brandName.value;
       const type = form.Type.value;
       const price = form.price.value;
       const rating = form.rating.value;
-      const product = {
+      const productInfo = {
+        userName,
         name,
         image,
         brandName,
@@ -16,12 +24,17 @@ const AddProducts = () => {
         price,
         rating,
       };
-      console.log(product);
+      console.log(productInfo);
     };
   
     return (
-      <div className="min-h-[calc(100vh-380px)]">
-        <h2 className="text-center text-3xl font-bold">Add Product</h2>
+      <div className="min-h-[calc(100vh-380px)] max-w-screen-xl mx-auto mt-6">
+        <h2 className="text-center font-inter text-3xl font-extrabold">
+        <span>
+          { update ? 'Update' : 'Add'}
+        </span>
+        {' '}Your Product
+        </h2>
         <form onSubmit={handleAddProduct} className="card-body bg-base-100">
           <div className="flex flex-col gap-2">
             <div className="form-control">
@@ -107,7 +120,7 @@ const AddProducts = () => {
             </div>
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#FF3811] hover:bg-[#ff2a00] border-none text-white text-[18px]">
+            <button className="btn btn-primary hover:btn-secondary border-none text-white text-[18px]">
               Add Product
             </button>
           </div>
