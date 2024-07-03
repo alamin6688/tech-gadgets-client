@@ -1,8 +1,8 @@
-import img1 from "../../../assets/banner01.jpg";
-import img2 from "../../../assets/banner02.jpg";
+import img1 from "../../../assets/banner04.jpg";
+import img2 from "../../../assets/banner03.jpg";
 import img3 from "../../../assets/banner01.jpg";
-import img4 from "../../../assets/banner02.jpg";
-import img5 from "../../../assets/banner01.jpg";
+import img4 from "../../../assets/banner05.jpg";
+import img5 from "../../../assets/banner06.jpg";
 import img6 from "../../../assets/banner02.jpg";
 
 const Banner = () => {
@@ -14,7 +14,7 @@ const Banner = () => {
           <div className="absolute flex rounded-xl items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
             <div className="text-white pl-8 md:pl-16 space-y-7 w-full md:w-1/2">
               <h2 className="text-4xl md:text-6xl font-bold">
-                Affordable Price For Car Servicing
+                Affordable Price For Tech Gadgets
               </h2>
               <p>
                 There are many variations of passages of available, but the
@@ -22,10 +22,10 @@ const Banner = () => {
               </p>
               <div>
                 <button className="btn bg-[#FF3811] hover:bg-[#ff2a00] text-white mr-5 border-none">
-                  Discover More
+                  Explore More
                 </button>
                 <button className="btn btn-outline text-white hover:text-[#ff2a00] mb-4">
-                  Latest Project
+                Latest News
                 </button>
               </div>
             </div>
@@ -50,7 +50,7 @@ const Banner = () => {
           <div className="absolute flex rounded-xl items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
             <div className="text-white pl-8 md:pl-16 space-y-7 w-full md:w-1/2">
               <h2 className="text-4xl md:text-6xl font-bold">
-                Affordable Price For Car Servicing
+                Affordable Price For Tech Gadgets
               </h2>
               <p>
                 There are many variations of passages of available, but the
@@ -58,10 +58,10 @@ const Banner = () => {
               </p>
               <div>
                 <button className="btn bg-[#FF3811] hover:bg-[#ff2a00] text-white mr-5 border-none">
-                  Discover More
+                Explore More
                 </button>
                 <button className="btn btn-outline text-white hover:text-[#ff2a00] mb-4">
-                  Latest Project
+                Latest News
                 </button>
               </div>
             </div>
@@ -86,7 +86,7 @@ const Banner = () => {
           <div className="absolute flex rounded-xl items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
             <div className="text-white pl-8 md:pl-16 space-y-7 w-full md:w-1/2">
               <h2 className="text-4xl md:text-6xl font-bold">
-                Affordable Price For Car Servicing
+                Affordable Price For Tech Gadgets
               </h2>
               <p>
                 There are many variations of passages of available, but the
@@ -94,10 +94,10 @@ const Banner = () => {
               </p>
               <div>
                 <button className="btn bg-[#FF3811] hover:bg-[#ff2a00] text-white mr-5 border-none">
-                  Discover More
+                Explore More
                 </button>
                 <button className="btn btn-outline text-white hover:text-[#ff2a00] mb-4">
-                  Latest Project
+                  Latest News
                 </button>
               </div>
             </div>
@@ -122,7 +122,7 @@ const Banner = () => {
           <div className="absolute flex rounded-xl items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
             <div className="text-white pl-8 md:pl-16 space-y-7 w-full md:w-1/2">
               <h2 className="text-4xl md:text-6xl font-bold">
-                Affordable Price For Car Servicing
+                Affordable Price For Tech Gadgets
               </h2>
               <p>
                 There are many variations of passages of available, but the
@@ -130,10 +130,10 @@ const Banner = () => {
               </p>
               <div>
                 <button className="btn bg-[#FF3811] hover:bg-[#ff2a00] text-white mr-5 border-none">
-                  Discover More
+                Explore More
                 </button>
                 <button className="btn btn-outline text-white hover:text-[#ff2a00] mb-4">
-                  Latest Project
+                  Latest News
                 </button>
               </div>
             </div>
@@ -158,7 +158,7 @@ const Banner = () => {
           <div className="absolute flex rounded-xl items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
             <div className="text-white pl-8 md:pl-16 space-y-7 w-full md:w-1/2">
               <h2 className="text-4xl md:text-6xl font-bold">
-                Affordable Price For Car Servicing
+                Affordable Price For Tech Gadgets
               </h2>
               <p>
                 There are many variations of passages of available, but the
@@ -166,10 +166,10 @@ const Banner = () => {
               </p>
               <div>
                 <button className="btn bg-[#FF3811] hover:bg-[#ff2a00] text-white mr-5 border-none">
-                  Discover More
+                Explore More
                 </button>
                 <button className="btn btn-outline text-white hover:text-[#ff2a00] mb-4">
-                  Latest Project
+                  Latest News
                 </button>
               </div>
             </div>
@@ -194,7 +194,7 @@ const Banner = () => {
           <div className="absolute flex rounded-xl items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
             <div className="text-white pl-8 md:pl-16 space-y-7 w-full md:w-1/2">
               <h2 className="text-4xl md:text-6xl font-bold">
-                Affordable Price For Car Servicing
+                Affordable Price For Tech Gadgets
               </h2>
               <p>
                 There are many variations of passages of available, but the
@@ -202,10 +202,10 @@ const Banner = () => {
               </p>
               <div>
                 <button className="btn bg-[#FF3811] hover:bg-[#ff2a00] text-white mr-5 border-none">
-                  Discover More
+                Explore More
                 </button>
                 <button className="btn btn-outline text-white hover:text-[#ff2a00] mb-4">
-                  Latest Project
+                  Latest News
                 </button>
               </div>
             </div>
