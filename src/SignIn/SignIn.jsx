@@ -85,16 +85,16 @@ const SignIn = () => {
         <title>Tech Gadgets | Sign In</title>
       </Helmet>
 
-      <div className="mb-5">
+      <div className="my-12 max-w-screen-xl mx-auto">
         <div
           style={{
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="hero min-h-[calc(100vh-380px)] bg-base-200 rounded-xl"
+          className="flex flex-col items-center justify-center min-h-[calc(100vh-380px)] bg-base-200 rounded-xl py-12"
         >
-          <div className="card shrink-0 w-[320px] md:w-[400px]  shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-[90%] mx-auto md:w-[500px] lg:w-[400px] shadow-2xl bg-base-100">
             <h1 className="text-3xl font-bold text-center mt-5">
               Please Sign In
             </h1>
