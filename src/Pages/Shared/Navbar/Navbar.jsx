@@ -29,9 +29,6 @@ const Navbar = () => {
       <NavLink to="/myCart" className="font-bold px-2">
         My Cart
       </NavLink>
-      <NavLink to="/sign-in" className="font-bold px-2">
-        Sign In
-      </NavLink>
       <NavLink to="/sign-up" className="font-bold px-2">
         Sign Up
       </NavLink>
