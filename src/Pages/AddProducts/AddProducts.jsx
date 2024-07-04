@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import { AuthContext } from "../../Providers/AuthProviders";
 import axios from "axios";
 import Swal from "sweetalert2";
+import UseAuth from "../../Hooks/UseAuth";
 
 const AddProducts = ({ update }) => {
-  const { user } = useContext(AuthContext);
+
+  const { user } = UseAuth() || {};
 
   const handleAddProduct = (e) => {
     e.preventDefault();
