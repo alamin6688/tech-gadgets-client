@@ -10,17 +10,17 @@ const NewsLetter = () => {
             Get Our Updates
           </h1>
           <p className="pt-2 pb-8 text-xl antialiased text-center dark:text-gray-300">
-            Find out about events and other news
+            Sign-up for our newsletter to get up-to-date from us.
           </p>
           <div className="flex flex-row">
             <input
               type="text"
-              placeholder="example@email.com"
-              className="w-3/5 p-3 rounded-l-lg sm:w-2/3"
+              placeholder="Enter your email..."
+              className="w-3/5 p-3 mr-2 rounded-lg sm:w-2/3"
             />
             <button
               type="button"
-              className="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 dark:bg-violet-600 dark:text-gray-50"
+              className="btn border-none btn-primary w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 dark:bg-violet-600 dark:text-gray-50"
             >
               Subscribe
             </button>

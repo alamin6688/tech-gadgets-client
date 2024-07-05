@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
+import { ScaleLoader } from "react-spinners";
 
 
 const PrivateRoute = ({ children }) => {
@@ -10,8 +11,8 @@ const PrivateRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-[calc(100vh-380px)]">
-        <span className="loading loading-dots loading-lg"></span>
+      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-380px)]">
+        <ScaleLoader size={100} color='#0000FF'></ScaleLoader>
       </div>
     );
   }
