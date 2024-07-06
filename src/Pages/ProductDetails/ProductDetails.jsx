@@ -1,13 +1,14 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import UseAuth from "../../Hooks/UseAuth";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
   const { user } = UseAuth() || {};
   const { id } = useParams();
-  console.log(id);
   const [product, setProduct] = useState({});
+  const modalRef = useRef(null);
 
   useEffect(() => {
     axios(`http://localhost:5000/singleProduct/${id}`)
@@ -30,7 +31,7 @@ const ProductDetails = () => {
     const type = form.Type.value;
     const price = form.price.value;
     const rating = form.rating.value;
-    const UpdatedProductInfo = {
+    const UpdatedInfo = {
       name,
       description,
       email,
@@ -40,7 +41,40 @@ const ProductDetails = () => {
       price,
       rating,
     };
-    console.log("Updated Product Info", UpdatedProductInfo);
+
+    axios
+      .put(`http://localhost:5000/updateProduct/${id}`, UpdatedInfo)
+      .then((res) => {
+        if (modalRef.current) {
+          modalRef.current.close();
+        }
+        if (res.data.modifiedCount > 0) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Your product updated successfully!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      })
+      .catch((error) => {
+        if (modalRef.current) {
+          modalRef.current.close();
+        }
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: error.message,
+          showConfirmButton: false,
+        });
+      });
+  };
+
+  const handleCloseModal = () => {
+    if (modalRef.current) {
+      modalRef.current.close();
+    }
   };
 
   return (
@@ -71,7 +105,7 @@ const ProductDetails = () => {
               >
                 Update Details
               </button>
-              <dialog id="my_modal_4" className="modal">
+              <dialog id="my_modal_4" className="modal" ref={modalRef}>
                 <div className="modal-box w-11/12 max-w-5xl">
                   <div className="modal-action">
                     <form
@@ -197,10 +231,21 @@ const ProductDetails = () => {
                           Update Product
                         </button>
                       </div>
+                      <div className="form-control mt-4">
+                        <button
+                          className="btn btn-secondary"
+                          onClick={handleCloseModal}
+                        >
+                          Close
+                        </button>
+                      </div>
                     </form>
                   </div>
                 </div>
               </dialog>
+            </div>
+            <div className="mt-2">
+              <button className="btn btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
