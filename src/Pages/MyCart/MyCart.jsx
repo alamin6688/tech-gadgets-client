@@ -39,6 +39,13 @@ const MyCart = () => {
 
   const handleDelete = (id) =>{
     console.log(id);
+    // axios(`http://localhost:5000/myProduct/${id}`)
+    // .then(res => {
+    //   console.log(res.data);
+    // })
+    // .catch(error => {
+    //   console.log(error.message);
+    // })
   }
 
   return (
@@ -47,7 +54,7 @@ const MyCart = () => {
         <MyCartCard
           handleDelete={handleDelete}
           deletable={true}
-          key={item.id}
+          key={item._id}
           item={item}
         />
       ))}

@@ -7,7 +7,7 @@ const MyCartCard = ({ item, deletable, handleDelete }) => {
   return (
     <div>
       <div className="flex relative">
-        <div className="w-full h-[400px] transition border-2 p-4 hover:scale-105 border-opacity-30 border-primary hover:border-blue-900  group hover:no-underline focus:no-underline">
+        <div className="w-full h-[420px] transition border-2 p-4 hover:scale-105 border-opacity-30 border-primary hover:border-blue-900  group hover:no-underline focus:no-underline">
           <Link
             rel="noopener noreferrer"
             className="max-w-sm mx-auto group hover:no-underline focus:no-underline"
@@ -26,8 +26,19 @@ const MyCartCard = ({ item, deletable, handleDelete }) => {
                 <p>{brandName}</p>
                 <p>{price}</p>
               </div>
-              <div>
-                <button className="btn btn-primary w-full mt-2">Buy Now</button>
+              <div className="flex items-center justify-between">
+                <div>
+                  <Link to={`/addProducts/${item._id}`}>
+                    <button className="btn btn-primary w-full mt-2">
+                      Details
+                    </button>
+                  </Link>
+                </div>
+                <div>
+                  <button className="btn btn-success w-full mt-2">
+                    Buy Now
+                  </button>
+                </div>
               </div>
             </div>
           </Link>
