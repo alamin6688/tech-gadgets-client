@@ -71,7 +71,9 @@ const AddProducts = ({ update }) => {
           <div className="flex flex-col gap-2">
             <div className="form-control">
               <label className="label">
-                <span className="label-text text-[16px] font-bold">Name/Title</span>
+                <span className="label-text text-[16px] font-bold">
+                  Name/Title
+                </span>
               </label>
               <input
                 type="text"

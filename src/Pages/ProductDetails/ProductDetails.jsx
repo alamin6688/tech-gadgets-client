@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import UseAuth from "../../Hooks/UseAuth";
 import Swal from "sweetalert2";
 
@@ -245,7 +245,8 @@ const ProductDetails = () => {
               </dialog>
             </div>
             <div className="mt-2">
-              <button className="btn btn-primary">Buy Now</button>
+              <Link to="/myCart">
+              <button className="btn btn-primary">Buy Now</button></Link>
             </div>
           </div>
         </div>
